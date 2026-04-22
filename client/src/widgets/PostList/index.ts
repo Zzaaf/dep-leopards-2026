@@ -1,0 +1,1 @@
+export { PostList } from '@/widgets/PostList/ui/PostList';

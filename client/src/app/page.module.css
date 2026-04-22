@@ -1,0 +1,53 @@
+.hero {
+  padding: 1rem 0 2rem;
+}
+
+.title {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  color: var(--foreground, #e8f0f6);
+}
+
+.accent {
+  color: var(--accent-bright, #7df9ff);
+}
+
+.lead {
+  margin: 0;
+  max-width: 32rem;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--muted, #8aa0b4);
+}
+
+.counter {
+  margin-top: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border, #2a3a48);
+  border-radius: 2px;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted, #8aa0b4);
+  cursor: pointer;
+  background: var(--surface-elevated, #0f161c);
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.counter:hover {
+  border-color: var(--accent, #00f0ff);
+  color: var(--accent-bright, #7df9ff);
+}
+
+.counterVal {
+  color: var(--accent-bright, #7df9ff);
+  font-weight: 600;
+}

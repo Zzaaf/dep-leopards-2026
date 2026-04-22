@@ -1,0 +1,1 @@
+export { PostForm } from '@/widgets/PostForm/ui/PostForm';

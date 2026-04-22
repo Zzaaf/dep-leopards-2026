@@ -1,0 +1,14 @@
+.footer {
+  margin-top: auto;
+  border-top: 1px solid var(--border, #2a3a48);
+  padding: 1rem 1.25rem;
+  text-align: center;
+}
+
+.text {
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted, #8aa0b4);
+}

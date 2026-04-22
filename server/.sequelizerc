@@ -1,0 +1,14 @@
+const fs = require('node:fs');
+const path = require('node:path');
+
+const envPath = path.resolve('.env');
+if (fs.existsSync(envPath)) {
+    process.loadEnvFile(envPath);
+}
+
+module.exports = {
+    config: path.resolve('src', 'db', 'config', 'database.json'),
+    'models-path': path.resolve('src', 'db', 'models'),
+    'seeders-path': path.resolve('src', 'db', 'seeders'),
+    'migrations-path': path.resolve('src', 'db', 'migrations'),
+};

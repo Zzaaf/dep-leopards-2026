@@ -1,0 +1,28 @@
+.section {
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border, #2a3a48);
+  border-radius: 2px;
+  background: var(--surface-elevated, #0f161c);
+  box-shadow: 0 0 0 1px rgba(0, 240, 255, 0.04);
+}
+
+.title {
+  margin: 0 0 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-bright, #7df9ff);
+}
+
+.hint {
+  margin: 0 0 1rem;
+  font-size: 0.75rem;
+  color: var(--muted, #8aa0b4);
+  line-height: 1.5;
+}
+
+.actions {
+  margin-top: 0.25rem;
+}

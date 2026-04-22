@@ -1,0 +1,1 @@
+export type { IPost, ArrayPostsType, IRawPostData } from '@/entities/post/model/types';

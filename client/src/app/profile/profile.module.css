@@ -1,0 +1,34 @@
+.pageTitle {
+  margin: 0 0 0.35rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--foreground, #e8f0f6);
+}
+
+.sub {
+  margin: 0 0 1.5rem;
+  font-size: 0.85rem;
+  color: var(--muted, #8aa0b4);
+  line-height: 1.55;
+}
+
+.name {
+  color: var(--accent-bright, #7df9ff);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.notSigned {
+  padding: 1.25rem;
+  border: 1px dashed var(--border, #2a3a48);
+  border-radius: 2px;
+  color: var(--muted, #8aa0b4);
+  font-size: 0.85rem;
+}

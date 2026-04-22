@@ -1,0 +1,1 @@
+export { Nav } from '@/widgets/Nav/ui/Nav';
