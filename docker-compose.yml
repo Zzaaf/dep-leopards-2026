@@ -58,12 +58,8 @@ services:
       ## - Обязательность: зависит от того, является ли интеграция обязательной для запуска.
       GIGACHAT_CREDENTIALS: ${GIGACHAT_CREDENTIALS}
       GIGACHAT_SCOPE: ${GIGACHAT_SCOPE}
-    ports:
-      ## ports — проброс портов наружу.
-      ## Формат "HOST:CONTAINER".
-      ## - Обязательность: ОПЦИОНАЛЬНО, если сервис нужен только другим контейнерам в сети compose.
-      ## - Для доступа к API с хоста/браузера — обычно ОБЯЗАТЕЛЬНО.
-      - "4000:4000"
+    expose:
+      - "4000"
     ## command — переопределяет CMD из Dockerfile.
     ## - Обязательность: ОПЦИОНАЛЬНО.
     ## - Зачем здесь:
@@ -90,7 +86,10 @@ services:
         ##   чтобы API URL "вшился" в клиентский бандл.
         # Важно: это значение "вшивается" в бандл (NEXT_PUBLIC_*).
         # Для локального запуска через Docker Compose браузер должен ходить по localhost:4000
-        NEXT_PUBLIC_API_URL: "http://localhost:4000/api"
+        # IMPORTANT:
+        # In production we route `/api` through nginx on the same origin,
+        # so the client should use relative API path (no CORS, cookies work).
+        NEXT_PUBLIC_API_URL: "/api"
     container_name: project-client
     environment:
       ## environment — runtime переменные окружения контейнера клиента.
@@ -104,8 +103,5 @@ services:
       ## - Важно: это НЕ "ожидание готовности" (без healthcheck). Это просто порядок старта.
       - server
     ports:
-      ## Проброс порта клиента наружу, чтобы открывать сайт в браузере.
-      ## Формат "ВНЕШНИЙ/host (published) : ВНУТРЕННИЙ/container (target)".
-      # - "80:3000"
       - "80:3000"
     restart: unless-stopped
